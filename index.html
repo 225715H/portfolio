@@ -9,7 +9,7 @@
   <body>
     <header>
       <nav class="container">
-        <div class="logo">Portfolio</div>
+        <a href="index.html" class="logo"> Portfolio </a>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#introduce">About</a></li>
@@ -81,30 +81,51 @@
         <h2 class="section-title">About Me</h2>
         <div class="introduce">
           <div class="introduce-info">
-            <h3 class="introduce-title">自己紹介</h3>
-            <p>私は、</p>
+            <h3 class="introduce-title">経歴</h3>
+            <p>
+              琉球大学工学部 知能情報コースの3年生です。
+              大学でコンピュータサイエンス（CS）を学び始め、プログラミングの基礎から応用、さらに人工知能やデータベースについて学んでいます。
+              また、大学外では、アルバイトでのWebアプリ開発や、友人とのプロジェクトでの開発などの経験もあります。
+            </p>
+            <h3 class="introduce-title">強み</h3>
+            <p>
+              私の強みは、知らないことを学ぶことに対する意欲です。
+              新しい知識は、自分のスキルを向上させるだけでなく、自身の意欲を高めることができると考えているため、
+              あまり触ったことのない言語を使うなど、新しい技術や知識を学ぶことに積極的に取り組んでいます。
+            </p>
+            <h3 class="introduce-title">キャリアビジョン</h3>
+            <p>
+              私のエンジニアとしてのキャリアビジョンは、世の中の課題を解決するプロダクトに携わることです。
+              このようなプロダクトを作るためには、大規模なプロジェクトになることが多いため、チームでの開発が必要です。
+              そのため、エンジニアとしてのコードを書く能力だけでなく、チームをまとめるリーダーシップや、他のメンバーとのコミュニケーション能力も身につけるべきだと考えています。
+            </p>
           </div>
-          <div class="introduce-links">
-            <a target="_blank" class="link-list">リンク一覧</a>
-            <a
-              href="https://github.com/225715H"
-              target="_blank"
-              class="link-button"
-              >GitHub</a
-            >
-            <a
-              href="https://atcoder.jp/users/m5t2k"
-              target="_blank"
-              class="link-button"
-              >AtCoder</a
-            >
-            <a
-              href="https://225715h.github.io/"
-              target="_blank"
-              class="link-button"
-              >Blog</a
-            >
-          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="links">
+      <div class="container">
+        <h2 class="section-title">Links</h2>
+        <div class="links-row">
+          <a
+            href="https://github.com/225715H"
+            target="_blank"
+            class="link-button"
+            >GitHub</a
+          >
+          <a
+            href="https://atcoder.jp/users/m5t2k"
+            target="_blank"
+            class="link-button"
+            >AtCoder</a
+          >
+          <a
+            href="https://225715h.github.io/"
+            target="_blank"
+            class="link-button"
+            >Blog</a
+          >
         </div>
       </div>
     </section>
@@ -112,31 +133,41 @@
     <section id="projects">
       <div class="container">
         <h2 class="section-title">Featured Projects</h2>
-        <div class="projects">
-          <div class="project">
-            <img src="/api/placeholder/600/400" alt="Project 1" />
-            <div class="project-info">
-              <h3 class="project-title">Responsive Web App</h3>
-              <p>
-                A fully responsive web application optimized for all devices.
-              </p>
+        <div class="project-list">
+          <a href="/project/oblivion.html" class="project-item">
+            <div class="project-image">
+              <img src="img/icon.png" alt="OBLIVION" />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">OBLIVION</h3>
+              <p>翻訳と単語帳を組み合わせた、英語学習アプリ</p>
+              <div class="project-link">
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </a>
+          <div class="project-item">
+            <div class="project-image">
+              <img src="path/to/image2.jpg" alt="" />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">準備中</h3>
+              <p>ただいま準備中です。近日公開予定ですので、お楽しみに！</p>
+              <div class="project-link">
+                <span>&rarr;</span>
+              </div>
             </div>
           </div>
-          <div class="project">
-            <img src="/api/placeholder/600/400" alt="Project 2" />
-            <div class="project-info">
-              <h3 class="project-title">Mobile-First Design</h3>
-              <p>An e-commerce platform built with a mobile-first approach.</p>
+          <div class="project-item">
+            <div class="project-image">
+              <img src="path/to/image3.jpg" alt="" />
             </div>
-          </div>
-          <div class="project">
-            <img src="/api/placeholder/600/400" alt="Project 3" />
-            <div class="project-info">
-              <h3 class="project-title">Adaptive UI</h3>
-              <p>
-                A dashboard with an adaptive user interface for various screen
-                sizes.
-              </p>
+            <div class="project-content">
+              <h3 class="project-title">準備中</h3>
+              <p>ただいま準備中です。近日公開予定ですので、お楽しみに！</p>
+              <div class="project-link">
+                <span>&rarr;</span>
+              </div>
             </div>
           </div>
         </div>

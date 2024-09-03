@@ -1,5 +1,5 @@
 #! /bin/sh
-path="$HOME/recursion/portfolio/resume"
+path="$HOME/portfolio/resume"
 sendTo="e225715@amane:~/public_html/"
 
 function exec_ie {
@@ -16,9 +16,9 @@ function exec_git {
     git push origin main
 }
 
-function exec {
+function main {
     exec_ie
     exec_git
 }
 
-exec
+main

@@ -53,7 +53,7 @@ nav {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary-color);
-  text-decoration: none;
+  
 }
 
 .nav-links {
@@ -327,8 +327,6 @@ section {
   overflow: hidden;
   transition: background-color 0.3s ease, transform 0.3s ease;
   position: relative;
-  text-decoration: none;
-  color: inherit; /* テキスト色を継承 */
 }
 
 .project-item:hover {
