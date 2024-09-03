@@ -1,0 +1,415 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --accent-color: #719ae8;
+  --text-color: #333;
+  --text-on-primary: #fff;
+  --text-color-gray: #666;
+  --background-color: #f4f4f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  transition: all 0.3s ease;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary-color);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  position: relative;
+}
+
+.hero-content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-title::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background-color: var(--accent-color);
+  bottom: 10px;
+  left: 0;
+  z-index: -1;
+  transition: height 0.3s ease;
+}
+
+.hero-title:hover::after {
+  height: 70%;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-weight: 300;
+  color: var(--text-color-gray);
+  margin-bottom: 2rem;
+}
+
+.hero-info {
+  font-size: clamp(
+    0.9rem,
+    3vw,
+    1.2rem
+  ); /* フォントサイズをデバイスに合わせて調整 */
+  text-align: left; /* テキストを左揃えに設定 */
+  color: var(--text-color); /* テキストの色を指定 (必要に応じて変数名を変更) */
+  margin-bottom: 2rem; /* 下のマージンを追加 */
+  max-height: 70vh; /* 最大高さを設定し、画面内に収める */
+}
+
+.hero-info-item {
+  flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.hero-info-item p {
+  margin-bottom: 1rem; /* 下のマージンを追加 */
+}
+
+.skills-section {
+  display: flex;
+  flex-direction: column; /* カテゴリを縦に並べる */
+  gap: 1.5rem; /* カテゴリ間のギャップを設定 */
+  margin-top: 1.5rem; /* 上のマージンを追加 */
+  max-width: 720px; /* スキル部分の最大幅を設定 */
+  width: 100%; /* 最大幅まで広げる */
+}
+
+.skills-category {
+  flex: 1;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap; /* スキルを横並びにし、折り返す */
+  gap: 0.75rem; /* スキル間のギャップを設定 */
+  margin-top: 0.5rem; /* 上のマージンを追加 */
+}
+
+.skill-item {
+  background-color: var(--primary-color); /* 背景色を設定 */
+  color: var(--text-on-primary); /* テキスト色を設定 */
+  padding: 0.4rem 0.8rem; /* パディングを設定 */
+  border-radius: 5px; /* 角を丸くする */
+  font-size: 0.9rem; /* フォントサイズを調整 */
+  white-space: nowrap; /* テキストを折り返さない */
+}
+
+.hero-info {
+  font-size: clamp(
+    0.9rem,
+    3vw,
+    1.2rem
+  ); /* フォントサイズをデバイスに合わせて調整 */
+  text-align: left; /* テキストを左揃えに設定 */
+  color: var(--text-color); /* テキストの色を指定 */
+  margin-bottom: 2rem; /* 下のマージンを追加 */
+  max-height: 70vh; /* 最大高さを設定し、画面内に収める */
+  overflow-y: auto; /* 必要に応じてスクロールを追加 */
+}
+
+/* メディアクエリでレイアウト調整 */
+@media (max-height: 800px) {
+  .hero-info {
+    max-height: 60vh; /* 画面が小さい場合に最大高さを調整 */
+  }
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+  40% {
+    transform: translateY(-30px) translateX(-50%);
+  }
+  60% {
+    transform: translateY(-15px) translateX(-50%);
+  }
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent-color);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 自己紹介 */
+.introduce {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* コンテンツを中央揃え */
+  gap: 2rem; /* リンクとテキスト間のスペース */
+  flex-wrap: wrap; /* レスポンシブ対応 */
+}
+
+.introduce-info {
+  flex: 1;
+  min-width: 250px; /* 最小幅の設定で崩れを防ぐ */
+  max-width: 450px; /* テキスト部分の最大幅を設定 */
+}
+
+.introduce-links {
+  flex: 1;
+  display: grid; /* グリッドレイアウトを使用 */
+  grid-template-columns: repeat(2, 1fr); /* 2列のグリッドに設定 */
+  gap: 1rem; /* リンク間のギャップ */
+  justify-items: center; /* 各リンクを中央揃え */
+  max-width: 300px; /* リンク部分の最大幅を設定 */
+}
+
+.link-list {
+  display: inline-block; /* ボタンをインラインブロックに設定 */
+  padding: 0.8rem 1.2rem; /* パディングを設定 */
+  background-color: var(--secondary-color); /* ボタンの背景色 */
+  color: var(--text-color); /* ボタンのテキスト色 */
+  border-radius: 5px; /* ボタンの角を丸くする */
+  text-decoration: none; /* テキストの下線を削除 */
+  font-weight: 600; /* ボタンのフォントの太さ */
+  transition: background-color 0.3s ease; /* 背景色のトランジション */
+  min-width: 120px; /* ボタンの最小幅を設定 */
+  text-align: center; /* テキストを中央揃え */
+}
+
+.link-button {
+  display: inline-block; /* ボタンをインラインブロックに設定 */
+  padding: 0.8rem 1.2rem; /* パディングを設定 */
+  background-color: var(--primary-color); /* ボタンの背景色 */
+  color: var(--text-on-primary); /* ボタンのテキスト色 */
+  border-radius: 5px; /* ボタンの角を丸くする */
+  text-decoration: none; /* テキストの下線を削除 */
+  font-weight: 600; /* ボタンのフォントの太さ */
+  transition: background-color 0.3s ease; /* 背景色のトランジション */
+  min-width: 120px; /* ボタンの最小幅を設定 */
+  text-align: center; /* テキストを中央揃え */
+}
+
+.link-button:hover {
+  background-color: var(--accent-color); /* ホバー時の背景色 */
+}
+
+/* メディアクエリでリンクのレイアウト調整 */
+@media screen and (max-width: 768px) {
+  .introduce-links {
+    grid-template-columns: 1fr; /* スマートフォンや小さな画面では1列に変更 */
+  }
+}
+
+/* プロダクト紹介 */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.project {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 16 / 9;
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project:hover img {
+  transform: scale(1.1);
+}
+
+.project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--secondary-color);
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.project:hover .project-info {
+  transform: translateY(0);
+}
+
+.project-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    right: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    width: 50%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    margin: 2.5rem 0;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nav-links {
+    width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(0.9rem, 4vw, 1.2rem);
+  }
+}
