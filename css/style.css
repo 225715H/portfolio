@@ -257,8 +257,9 @@ section {
   display: flex;
   align-items: center;
   justify-content: center; /* コンテンツを中央揃え */
-  gap: 2rem; /* リンクとテキスト間のスペース */
+  gap: 1rem; /* リンクとテキスト間のスペース */
   flex-wrap: wrap; /* レスポンシブ対応 */
+  flex-direction: column; /* レスポンシブ対応 */
 }
 
 .introduce-info {
@@ -321,9 +322,9 @@ section {
   display: flex;
   align-items: center;
   gap: 1rem; /* 画像とテキストの間のスペース */
-  padding: 1rem;
-  background-color: var(--secondary-color);
-  border-radius: 10px;
+  padding: 1rem; /* 上下のパディングを追加 */
+  background-color: var(--background-color);
+  border-bottom: var(--text-color-gray) 0.2px solid;
   overflow: hidden;
   transition: background-color 0.3s ease, transform 0.3s ease;
   position: relative;
@@ -332,8 +333,10 @@ section {
 }
 
 .project-item:hover {
-  background-color: var(--background-color); /* ホバー時の背景色変更 */
-  transform: translateX(10px); /* ホバー時に右に少し動かす */
+  background-color: var(--secondary-color); /* ホバー時の背景色変更 */
+  transform: scale(1.05); /* ホバー時に拡大 */
+  border: none;
+  border-radius: 10px;
 }
 
 .project-image {
@@ -396,7 +399,7 @@ section {
 }
 
 .project-item:hover .project-link span {
-  transform: translateX(4px);
+  transform: scale(1.05);
 }
 
 footer {

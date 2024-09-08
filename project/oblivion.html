@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="css/project.css" />
   </head>
   <body>
     <header>
@@ -23,24 +23,52 @@
       </nav>
     </header>
 
-    <section id="introduce">
-      <div class="container">
-        <h2 class="section-title">OBLIVION</h2>
-        <!-- 画像 -->
-        <div class="introduce">
-          <div class="introduce-info">
-            <h3 class="introduce-title">アプリについて</h3>
-            <p></p>
-            <h3 class="introduce-title">背景</h3>
-            <p></p>
-            <h3 class="introduce-title">技術</h3>
-            <p></p>
-            <h3 class="introduce-title">苦労した点・工夫した点</h3>
-            <p></p>
-            <h3 class="introduce-title">学んだこと</h3>
-            <p></p>
-          </div>
+    <section id="introduce" class="introduce">
+      <h2 class="section-title">OBLIVION</h2>
+      <div class="image-container">
+        <img
+          src="../img/oblivion.png"
+          alt="サンプル画像"
+          class="responsive-image"
+        />
+      </div>
+      <div class="introduce-info">
+        <h3 class="introduce-title">アプリについて</h3>
+        <p>
+          このアプリは、翻訳と単語帳を組み合わせた学習アプリで、独自のアルゴリズムを用いて、ユーザの理解度に合わせた問題を出題します。
+          従来の単語帳とは違って、自分自身で単語帳を作成するだけではなく、翻訳した単語をそのまま単語帳に登録することができ、効率よく学習を進めることができます。
+        </p>
+        <h3 class="introduce-title">背景</h3>
+        <p>
+          友人が英語の勉強をしている際に、単語を翻訳してもすぐ忘れるという課題から翻訳した単語をそのまま単語帳に登録できれば便利だというアイデアを得て、その友人と共同で開発しました。
+        </p>
+        <h3 class="introduce-title">使用技術</h3>
+        <p>
+          <div class="skills-list">
+          <span class="skill-item">TypeScript</span>
+          <span class="skill-item">React Native</span>
+          <span class="skill-item">Expo</span>
+          <span class="skill-item">VSCode</span>
+          <span class="skill-item">Discord</span>
+          <span class="skill-item">GitHub</span>
+          <span class="skill-item">Figma</span>
         </div>
+        </p>
+        <h3 class="introduce-title">苦労した点・工夫した点</h3>
+        <p>
+          苦労した点は、アプリの仕様を決めていくことでした。
+          最初は、翻訳した単語をそのまま単語帳に登録することができるというアイデアだけで、そこから色んな機能の案を出し合いましたが、
+          実装のハードルが高かったり、当初の目的から外れてしまうものが多かったため、何度も議論を重ねて最終的な仕様を決定しました。<br>
+          <br>
+          工夫した点は、ユーザが使いやすいように、シンプルなデザインにすることで、直感的に操作できるようにしました。
+          また、 コードの可読性を高めるために、atomig designを取り入れ、コンポーネントを細かく分割することで、コードの見通しを良くしました。
+        </p>
+        <h3 class="introduce-title">学んだこと</h3>
+        <p>
+          アプリ開発に関して、完璧を作るよりも完成させることが大切だということを身をもって感じました。
+          そのため、仕様に関しては、最低限の機能を実装し、周りのフィードバックや実際に使ってみて、必要な機能を追加していくことが重要だと学びました。
+          また、共同開発したため、コミュニケーションをとりながら、仕様の決定や実装を進めることの大切さを学びました。
+        </p>
       </div>
     </section>
 

@@ -53,7 +53,7 @@ nav {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary-color);
-  
+  text-decoration: none;
 }
 
 .nav-links {
@@ -257,14 +257,15 @@ section {
   display: flex;
   align-items: center;
   justify-content: center; /* コンテンツを中央揃え */
-  gap: 2rem; /* リンクとテキスト間のスペース */
-  flex-wrap: wrap; /* レスポンシブ対応 */
+  flex-direction: column; /* レイアウトを縦に変更 */
+  width: 100%; /* 幅を100%に設定 */
 }
 
 .introduce-info {
   flex: 1;
   min-width: 250px; /* 最小幅の設定で崩れを防ぐ */
   max-width: 600px; /* テキスト部分の最大幅を設定 */
+  width: 90%; /* 幅を90%に設定 */
 }
 
 .introduce-title {
@@ -321,17 +322,21 @@ section {
   display: flex;
   align-items: center;
   gap: 1rem; /* 画像とテキストの間のスペース */
-  padding: 1rem;
-  background-color: var(--secondary-color);
-  border-radius: 10px;
+  padding: 1rem; /* 上下のパディングを追加 */
+  background-color: var(--background-color);
+  border-bottom: var(--text-color-gray) 0.2px solid;
   overflow: hidden;
   transition: background-color 0.3s ease, transform 0.3s ease;
   position: relative;
+  text-decoration: none;
+  color: inherit; /* テキスト色を継承 */
 }
 
 .project-item:hover {
-  background-color: var(--background-color); /* ホバー時の背景色変更 */
-  transform: translateX(10px); /* ホバー時に右に少し動かす */
+  background-color: var(--secondary-color); /* ホバー時の背景色変更 */
+  transform: scale(1.05); /* ホバー時に拡大 */
+  border: none;
+  border-radius: 10px;
 }
 
 .project-image {
@@ -394,7 +399,7 @@ section {
 }
 
 .project-item:hover .project-link span {
-  transform: translateX(4px);
+  transform: scale(1.05);
 }
 
 footer {
@@ -449,5 +454,24 @@ footer {
 
   .hero-subtitle {
     font-size: clamp(0.9rem, 4vw, 1.2rem);
+  }
+}
+
+/* プロジェクトの画像のサイズの調整 */
+.image-container {
+  max-width: 100%; /* コンテナが画面幅に収まる */
+  text-align: center; /* 画像を中央揃え */
+}
+
+.responsive-image {
+  width: 100%; /* 画像の幅をコンテナの幅に合わせる */
+  height: auto; /* アスペクト比を維持しながら高さを自動調整 */
+  max-width: 600px; /* 画像の最大幅を設定 */
+}
+
+/* モバイルデバイス向けの微調整 */
+@media (max-width: 600px) {
+  .responsive-image {
+      max-width: 90%; /* モバイルでは少し余白を残す */
   }
 }
