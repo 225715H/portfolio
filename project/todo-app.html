@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/project.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <a href="../index.html" class="logo">Portfolio </a>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#introduce">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <section id="introduce" class="introduce">
+      <h2 class="section-title">TODO アプリ</h2>
+      <div class="image-container">
+        <img
+          src="../img/todo-app.png"
+          alt="サンプル画像"
+          class="responsive-image"
+        />
+      </div>
+      <div class="introduce-info">
+        <h3 class="introduce-title">
+          アプリについて(
+          <a href="https://github.com/225715H/todoproject">GitHub</a>
+          )
+        </h3>
+        <p>
+          このアプリは、ハンズオンで作成したTODOアプリです。シンプルなデザインと直感的な操作で、タスクの追加、削除、完了を行うことができます。
+        </p>
+        <h3 class="introduce-title">背景</h3>
+        <p>
+          大学では、pythonを使う機会が多かったため、使い慣れているpytonでアプリを作成したいと思い、Djangoを使ってTODOアプリを作成しました。
+        </p>
+        <h3 class="introduce-title">使用技術</h3>
+        <div class="skills-list">
+          <span class="skill-item">python</span>
+          <span class="skill-item">Django</span>
+          <span class="skill-item">html</span>
+          <span class="skill-item">bootstrap</span>
+        </div>
+        <h3 class="introduce-title">苦労した点・工夫した点</h3>
+        <p>
+          苦労した点は、実際にデプロイするときのエラーの対処です。
+          デプロイすること自体初めてということもあり、エラーが出た際に、どのように対処すればいいのかわからず、ChatGPTを使って、いろんな方法を試して解決しました。
+          <br />
+          <br />
+          ハンズオン形式で作成したため、特別な工夫は多くありませんが、あえて挙げるなら、デザインをシンプルにすることで直感的な操作性を重視しました。
+        </p>
+        <h3 class="introduce-title">学んだこと</h3>
+        <p>
+          自主的に初めて取り組んだアプリ開発であったため、アプリ開発の大まかな流れを学ぶことができました。
+          また、バージョン管理や全て自分で進めていくという点で、自分の力でアプリを作成することの難しさを実感しました。
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Other Projects</h2>
+        <div class="project-list">
+          <a href="oblivion.html" class="project-item">
+            <div class="project-image">
+              <img src="../img/icon.png" alt="OBLIVION" />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">OBLIVION</h3>
+              <p>翻訳と単語帳を組み合わせた、英語学習アプリ</p>
+              <div class="project-link">
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </a>
+          <a href="my-word-app.html" class="project-item">
+            <div class="project-image">
+              <img src="../img/my-word-image.png" alt="my-word-app" />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">My Word App</h3>
+              <p>授業で制作した自分自身の単語帳アプリ</p>
+              <div class="project-link">
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

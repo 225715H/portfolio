@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/project.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <a href="../index.html" class="logo">Portfolio </a>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#introduce">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    </header>
+
+    <section id="introduce" class="introduce">
+      <h2 class="section-title">My Word App</h2>
+      <div class="image-container">
+        <img
+          src="../img/my-word-app.png"
+          alt="サンプル画像"
+          class="responsive-image"
+        />
+      </div>
+      <div class="introduce-info">
+        <h3 class="introduce-title">
+          アプリについて (
+          <a href="https://github.com/e225711/my_word_app">GitHub</a>
+          )
+        </h3>
+        <p>
+          このアプリは、大学の授業で制作した単語帳アプリです。
+          気になったり、わからない単語を調べながら実際に追加していくことで、自身に合わせた単語帳を作成できます。
+        </p>
+        <h3 class="introduce-title">背景</h3>
+        <p>
+          チームで、大学生になって初めてコンピュータサイエンスなどを学び、難しい用語が多いと話し合った際に、
+          用語を覚えるための単語帳のようなアプリがあれば便利だというアイデアを得て、チームで開発しました。
+        </p>
+        <h3 class="introduce-title">使用技術</h3>
+        <div class="skills-list">
+          <span class="skill-item">python</span>
+          <span class="skill-item">tkinter</span>
+        </div>
+        <h3 class="introduce-title">苦労した点・工夫した点</h3>
+        <p>
+          苦労した点は、メンバー全員が初めてのチーム開発だったため、コミュニケーションの取り方に苦労したことです。
+          そのため、4人のチームを2人ずつのペアに分け、ペアプログラミングを行いながら、アジャイル手法を取り入れて進めました。<br />
+          <br />
+          工夫した点は、ジャンルが増えたり、単語が増えたりしても、使いやすいように、シンプルなデザインにすることで、直感的に操作できるようにしました。
+          また、理解度をつけることで、学習効率を高めることができるようにしました。
+        </p>
+        <h3 class="introduce-title">学んだこと</h3>
+        <p>
+          初めてのチーム開発であったため、コミュニケーションをとることがいかに大事かを学びました。
+          また、使ったライブラリ(tkinter)も初めて使うものであったため、調べながら進めていくことの面白さを知ることができました。
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Other Projects</h2>
+        <div class="project-list">
+          <a href="oblivion.html" class="project-item">
+            <div class="project-image">
+              <img src="../img/icon.png" alt="OBLIVION" />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">OBLIVION</h3>
+              <p>翻訳と単語帳を組み合わせた、英語学習アプリ</p>
+              <div class="project-link">
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </a>
+          <a href="todo-app.html" class="project-item">
+            <div class="project-image">
+              <img src="../img/todo-image.png" alt="todo-app" />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">TODO アプリ</h3>
+              <p>タスクを管理するための、シンプルなTODOアプリ</p>
+              <div class="project-link">
+                <span>&rarr;</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>
